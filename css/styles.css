@@ -5,6 +5,11 @@ body {
     background-color:var(--container);
     color: var(--primary-color);
 }
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
 :root {
     --bgr-color:#2F303A;
     --container:#FFFFFF;
@@ -12,6 +17,8 @@ body {
     --primary-color:#212121;
     --secondary-color:#757575;
     --primary-btn-color:#2196F3;
+    --btn:#FFFFFF;
+    --btn-prtf:#212121;
     --btn-secondary:#188CE8;
     --contact-footer:rgba(255, 255, 255, 0.6);
     --our-team-nav-prtf:#F5F4FA;
@@ -146,7 +153,7 @@ ul {
 .main-btn {
     padding: 10px 32px;
     background-color:var(--primary-btn-color);
-    color: var(--bgr-color);
+    color: var(--btn);
     font-weight: 700;
     font-family: inherit;
     font-size: 16px;
@@ -188,6 +195,10 @@ ul {
 .work-list {
     display: flex;
     margin-top: 50px;
+}
+.photo{
+    display: block;
+    max-width: 100%;
 }
 .work-item:not(:last-child) {
     margin-right: 30px;
@@ -238,7 +249,7 @@ ul {
     padding-top: 60px;
     padding-bottom: 60px;
 } 
-.address-list {
+.address-list:not(:first-child) {
     margin-top: 9px;
 }
 .logo-footer {
@@ -268,7 +279,7 @@ ul {
 }
 .btn-nav-prtfolio {
     background-color:var(--our-team-nav-prtf);
-    color: var(--primary-color);
+    color: var(--btn-prtf) ;
     font-family: inherit;
     cursor: pointer;
     font-weight: 500;
@@ -284,7 +295,7 @@ ul {
 .btn-nav-prtfolio:hover,
 .btn-nav-prtfolio:focus {
     background-color:var(--primary-btn-color);
-    color: var(--bgr-color);
+    color: var(--btn);
 }
 .btn-prtfolio {
     display: flex;
@@ -314,14 +325,15 @@ ul {
 .work-list-prtf {
     display: flex;
     flex-wrap: wrap;
+    box-sizing: border-box;
 }
 .item-title {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;
+    padding-right: 24px;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
 }
-
 
